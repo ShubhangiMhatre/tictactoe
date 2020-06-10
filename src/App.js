@@ -140,12 +140,13 @@ class App extends React.Component {
 
   handleModeChange(e) {
     e.preventDefault();
-    if (e.target.getAttribute("href").includes("AI")) {
+    if (e.target.id.includes("ai")) {
       e.target.style.background = "#d4edda";
       document.querySelector("#twop").style.background = "none";
       this.setState({ mode: "AI" });
       this.handleReset(null);
-    } else if (e.target.getAttribute("href").includes("2P")) {
+    } else if (e.target.id.includes
+      ("twop")) {
       e.target.style.background = "#d4edda";
       document.querySelector("#ai").style.background = "none";
       this.setState({ mode: "2P" });
