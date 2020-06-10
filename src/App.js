@@ -155,6 +155,7 @@ class App extends React.Component {
 
   render() {
     const rows = [];
+    
     for (var i = 0; i < 3; i++)
       rows.push(
         <Row
@@ -169,19 +170,17 @@ class App extends React.Component {
         <div class="container jumbotron" id="container">
           <h3>TIC TAC TOE</h3>
           <p>
-            <a href="./?AI" onClick={this.handleModeChange} id="ai">
+            <button  onClick={this.handleModeChange} id="ai">
               Versus AI
-            </a>{" "}
+            </button>{" "}
             ||
-            <a href="./?2P" onClick={this.handleModeChange} id="twop">
+            <button  onClick={this.handleModeChange} id="twop">
               {" "}
               2 Players
-            </a>{" "}
+            </button>{" "}
             ||
-            <a href="#" onClick={this.handleReset}>
-              {" "}
-              Reset board
-            </a>
+           
+            <button onClick={this.handleReset} >Reset board</button>
           </p>
           <p>{String.fromCharCode(symbolsMap[this.state.turn][1])}'s turn</p>
           <div className="board">{rows}</div>
