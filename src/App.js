@@ -169,7 +169,7 @@ class App extends React.Component {
     return (
       <div>
         <div class="container jumbotron" id="container">
-          <h3>TIC TAC TOE</h3>
+          <h3>TIC TAC TOE [RUNNING ON AWS]</h3>
           <p>
             <button  onClick={this.handleModeChange} id="ai">
               Versus AI
